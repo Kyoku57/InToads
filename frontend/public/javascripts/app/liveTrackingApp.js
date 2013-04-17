@@ -18,11 +18,14 @@ require.config({
 });
 
 require([
-    'app/views/Map'
-], function (Map) {
+    'app/Stream',
+    'app/views/Map',
+    'app/views/LogEvents'
+], function (stream,Map,LogEvents) {
     // Application startup
     var mapView=new Map();
+    var logView=new LogEvents();
     var source = new EventSource("/live");
-    source.onmessage = $.proxy(mapView.onNotification,mapView);
+    source.onmessage = $.proxy(stream.trigger,stream);
     console.log("Application loaded.")
 });

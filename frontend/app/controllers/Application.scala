@@ -13,6 +13,7 @@ import akka.util.Timeout
 import play.api.libs.EventSource
 import akka.pattern.ask
 import concurrent.ExecutionContext.Implicits.global
+import java.util.Date
 
 object Application extends Controller {
   
@@ -21,7 +22,7 @@ object Application extends Controller {
   }
 
   def notif = Action(parse.json){request=>
-    Notification.newMessage(Message((request.body \ "message").as[String]))
+    Notification.newMessage(Message((request.body \ "message").as[String]+ " "+new Date().getTime))
     Ok("ok")
   }
 

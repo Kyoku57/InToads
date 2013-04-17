@@ -2,8 +2,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'bootstrap'
-], function($, _, Backbone, Bootstrap){
+    'bootstrap',
+    'app/Stream'
+], function($, _, Backbone, Bootstrap,stream){
 
     var MapView = Backbone.View.extend({
 
@@ -16,6 +17,7 @@ define([
         },
 
         initialize: function() {
+            stream.registerOn("newMessage", $.proxy(this.onNotification,this));
             var mapOptions = {
                 center: new google.maps.LatLng(49.106664,6.081901),
                 zoom: 15,
@@ -29,7 +31,7 @@ define([
         },
 
         onNotification: function(notif){
-            console.log("On notif in view : "+notif.data);
+            console.log("On notif in view : "+notif.message);
             if(this.marker==null){
                 var myLatlng = new google.maps.LatLng(49.106664,6.081901);
                 this.marker = new google.maps.Marker({
