@@ -1,0 +1,22 @@
+@(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>InToads 2013!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href=" @routes.Assets.at("stylesheets/jquery-ui-1.8.24.custom.css") ">
+    <link rel="stylesheet" media="screen" href=" @routes.Assets.at("stylesheets/main.css") ">
+    <link rel="stylesheet" media="screen" href=" @routes.Assets.at("stylesheets/bootstrap.css") ">
+    <link rel="stylesheet" media="screen" href=" @routes.Assets.at("stylesheets/bootstrap-responsive.min.css") ">
+    <link rel="stylesheet" media="screen" href=" @routes.Assets.at("stylesheets/rickshaw.css") ">
+    <link rel="stylesheet" media="screen" href=" @routes.Assets.at("stylesheets/jgauge.css") ">
+    <link rel="stylesheet" media="screen" href=" @routes.Assets.at("stylesheets/jquery-flipcounter.css") ">
+    <link rel="shortcut icon" type="image/png" href=" @routes.Assets.at("images/favicon.png") ">
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBN7xbPPncfSsHvn_e3YoLrL_bgebgg3x8&sensor=false"></script>
+
+    <body>
+        @content
+    </body>
+</html>
