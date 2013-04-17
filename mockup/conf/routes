@@ -1,0 +1,7 @@
+GET     /teams                          controllers.Application.teams
+GET     /team/:id                       controllers.Application.team(id:String)
+GET     /rider/:id                      controllers.Application.rider(id:String)
+POST    /position/:id                   controllers.Application.savePosition(id:String)
+
+POST    /lap/start/:idRider              controllers.Application.lap(idRider:String,notifType="start")
+POST    /lap/end/:idRider                controllers.Application.lap(idRider:String,notifType="end")
