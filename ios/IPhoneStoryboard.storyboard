@@ -12,7 +12,22 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" image="InToads.png" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-lW-V41"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" image="InToads.png" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-lW-V41">
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knc-HS-6Nd">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hidePicker:" destination="Y0m-vf-tEA" eventType="touchUpInside" id="SsG-uV-YHj"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCr-xO-Stg">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -60,38 +75,74 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3O-Xi-pzW">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9Y-f9-6h4">
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3O-Xi-pzW">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="216" type="user" id="ur9-gQ-6Qy"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y0m-vf-tEA" id="xkk-Te-tpQ"/>
+                                            <outlet property="delegate" destination="Y0m-vf-tEA" id="lJy-jy-Ltp"/>
+                                        </connections>
+                                    </pickerView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeV-oP-txp">
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="u6q-fe-Eqp"/>
+                                            <barButtonItem style="done" systemItem="done" id="D2P-Sr-8Lx">
+                                                <connections>
+                                                    <action selector="hidePicker:" destination="Y0m-vf-tEA" id="hCR-IK-sve"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="ur9-gQ-6Qy"/>
+                                    <constraint firstAttribute="bottom" secondItem="L3O-Xi-pzW" secondAttribute="bottom" type="user" id="7Nw-W4-IPk"/>
+                                    <constraint firstItem="AeV-oP-txp" firstAttribute="top" secondItem="o9Y-f9-6h4" secondAttribute="top" type="default" id="Kls-hg-Ksu"/>
+                                    <constraint firstAttribute="height" constant="260" type="user" id="dVx-8n-3PY"/>
+                                    <constraint firstItem="AeV-oP-txp" firstAttribute="trailing" secondItem="o9Y-f9-6h4" secondAttribute="trailing" type="default" id="lub-wQ-Xni"/>
+                                    <constraint firstItem="L3O-Xi-pzW" firstAttribute="leading" secondItem="o9Y-f9-6h4" secondAttribute="leading" type="default" id="uWW-SU-HvK"/>
+                                    <constraint firstItem="L3O-Xi-pzW" firstAttribute="trailing" secondItem="o9Y-f9-6h4" secondAttribute="trailing" type="default" id="vRP-WF-kEL"/>
+                                    <constraint firstItem="AeV-oP-txp" firstAttribute="leading" secondItem="o9Y-f9-6h4" secondAttribute="leading" type="default" id="zJG-hl-vVj"/>
                                 </constraints>
-                            </pickerView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.9689753276759151" blue="0.88502465042947065" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1RI-lW-V41" firstAttribute="bottom" secondItem="ay0-XR-bso" secondAttribute="bottom" type="default" id="5xs-NH-JU7"/>
                             <constraint firstItem="SCr-xO-Stg" firstAttribute="top" secondItem="Ae8-ny-GNO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BHa-dE-D3Y"/>
                             <constraint firstItem="Ae8-ny-GNO" firstAttribute="top" secondItem="ay0-XR-bso" secondAttribute="top" constant="20" symbolic="YES" type="default" id="BJL-AY-wzx"/>
                             <constraint firstItem="1RI-lW-V41" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" type="default" id="CUs-7p-Y6X"/>
                             <constraint firstAttribute="bottom" secondItem="q0N-ZG-EzJ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Ctd-wg-zpO"/>
-                            <constraint firstItem="L3O-Xi-pzW" firstAttribute="trailing" secondItem="ay0-XR-bso" secondAttribute="trailing" type="default" id="KWh-IF-GHP"/>
+                            <constraint firstItem="q0N-ZG-EzJ" firstAttribute="centerX" secondItem="o9Y-f9-6h4" secondAttribute="centerX" type="user" id="L1a-ph-heb"/>
+                            <constraint firstItem="Gmh-cV-HUu" firstAttribute="centerX" secondItem="Sir-sm-lM5" secondAttribute="centerX" type="default" id="LzK-gK-le0"/>
+                            <constraint firstItem="o9Y-f9-6h4" firstAttribute="trailing" secondItem="ay0-XR-bso" secondAttribute="trailing" type="user" id="MFD-Dd-kIJ"/>
+                            <constraint firstItem="Knc-HS-6Nd" firstAttribute="top" secondItem="ay0-XR-bso" secondAttribute="top" type="default" id="NvW-c6-PDb"/>
                             <constraint firstItem="1RI-lW-V41" firstAttribute="trailing" secondItem="ay0-XR-bso" secondAttribute="trailing" type="default" id="PPC-RT-T82"/>
-                            <constraint firstItem="q0N-ZG-EzJ" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RET-ly-Deb"/>
+                            <constraint firstItem="q0N-ZG-EzJ" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="RET-ly-Deb"/>
                             <constraint firstItem="SCr-xO-Stg" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SBL-ag-BED"/>
-                            <constraint firstItem="q0N-ZG-EzJ" firstAttribute="centerX" secondItem="Gmh-cV-HUu" secondAttribute="centerX" type="default" id="Teb-Fc-ICT"/>
+                            <constraint firstItem="1RI-lW-V41" firstAttribute="bottom" secondItem="ay0-XR-bso" secondAttribute="bottom" type="default" id="U9M-Po-IBK"/>
                             <constraint firstItem="Gmh-cV-HUu" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XB1-Y5-t3o"/>
+                            <constraint firstAttribute="trailing" secondItem="SCr-xO-Stg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YVK-20-9LB"/>
+                            <constraint firstItem="Knc-HS-6Nd" firstAttribute="centerY" secondItem="1RI-lW-V41" secondAttribute="centerY" type="default" id="Yvs-5U-UXe"/>
+                            <constraint firstItem="Knc-HS-6Nd" firstAttribute="trailing" secondItem="ay0-XR-bso" secondAttribute="trailing" type="default" id="aaj-QB-mMh"/>
                             <constraint firstItem="Sir-sm-lM5" firstAttribute="top" secondItem="ay0-XR-bso" secondAttribute="top" constant="123" type="user" id="b06-BU-mQj"/>
                             <constraint firstItem="Sir-sm-lM5" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="b0W-6J-RVP"/>
-                            <constraint firstAttribute="trailing" secondItem="q0N-ZG-EzJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="coW-62-hwb"/>
+                            <constraint firstAttribute="trailing" secondItem="q0N-ZG-EzJ" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="coW-62-hwb"/>
                             <constraint firstItem="Gmh-cV-HUu" firstAttribute="top" secondItem="Sir-sm-lM5" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="dWH-oG-JON"/>
-                            <constraint firstItem="L3O-Xi-pzW" firstAttribute="bottom" secondItem="ay0-XR-bso" secondAttribute="bottom" constant="216" type="user" id="gL0-jI-8hA"/>
+                            <constraint firstItem="Knc-HS-6Nd" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" type="default" id="dbP-2Q-Enu"/>
+                            <constraint firstAttribute="trailing" secondItem="Gmh-cV-HUu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="e6v-un-BVp"/>
+                            <constraint firstItem="o9Y-f9-6h4" firstAttribute="bottom" secondItem="ay0-XR-bso" secondAttribute="bottom" constant="260" type="user" id="fGb-zv-jKG"/>
                             <constraint firstItem="Ae8-ny-GNO" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hHo-3Z-Hhk"/>
-                            <constraint firstItem="L3O-Xi-pzW" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" type="default" id="jcJ-Qk-E0c"/>
+                            <constraint firstItem="o9Y-f9-6h4" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" type="user" id="hUL-2X-0sQ"/>
                             <constraint firstItem="1RI-lW-V41" firstAttribute="top" secondItem="ay0-XR-bso" secondAttribute="top" type="default" id="kcG-VN-RBn"/>
-                            <constraint firstItem="SCr-xO-Stg" firstAttribute="trailing" secondItem="Gmh-cV-HUu" secondAttribute="trailing" type="default" id="mTV-rK-aUv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Starting block" id="imU-cp-OfR"/>
                     <connections>
+                        <outlet property="pickerView" destination="o9Y-f9-6h4" id="7AT-tz-JEz"/>
                         <outlet property="riderField" destination="Gmh-cV-HUu" id="UK0-HO-9lg"/>
                         <outlet property="riderLabel" destination="Sir-sm-lM5" id="MeR-zI-Vgc"/>
                         <outlet property="selectionPicker" destination="L3O-Xi-pzW" id="cfV-IO-tU0"/>
@@ -134,7 +185,10 @@
         <class className="TeamViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TeamViewController.h"/>
             <relationships>
+                <relationship kind="action" name="hidePicker:"/>
+                <relationship kind="action" name="showPicker:"/>
                 <relationship kind="action" name="startAction:"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="riderField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="riderLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="selectionPicker" candidateClass="UIPickerView"/>

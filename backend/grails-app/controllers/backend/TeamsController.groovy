@@ -1,13 +1,16 @@
 package backend
 
+import grails.converters.JSON
+
+
 class TeamsController {
 
-    /**
-     * retourne la liste des équipes
-     * @return
-     */
+    def mongo
+
     def index() {
 
-        render("liste des equipes")
+        def listeams = Teams.findAllByName("test")
+
+        render listeams as JSON
     }
 }

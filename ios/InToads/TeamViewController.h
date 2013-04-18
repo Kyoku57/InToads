@@ -16,11 +16,16 @@
 @property (strong, nonatomic) IBOutlet UITextField *riderField;
 @property (strong, nonatomic) IBOutlet UIButton *startButton;
 @property (strong, nonatomic) IBOutlet UIPickerView *selectionPicker;
+@property (strong, nonatomic) IBOutlet UIView *pickerView;
 
-@property (nonatomic) int selectedTextFieldTag;
+@property (strong, nonatomic) UITextField *selectedTextField;
+@property (nonatomic) BOOL pickerIsVisible;
+@property (strong, nonatomic) NSString *selectedRowFromPicker;
 
 @property (strong, nonatomic) NSMutableArray *teamsArray;
 @property (strong, nonatomic) NSMutableArray *ridersArray;
 
 - (IBAction)startAction:(id)sender;
+-(IBAction) showPicker:(id)sender;
+-(IBAction) hidePicker:(id)sender;
 @end
