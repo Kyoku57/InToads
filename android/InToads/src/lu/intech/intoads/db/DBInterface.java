@@ -1,19 +1,28 @@
 package lu.intech.intoads.db;
 
+import android.database.Cursor;
+
 /**
  * DB Interface
  * 
  * @author sebastien
  *
  */
-public interface DBInterface<Entry> {
-	public Entry getFromId(long i);
+public interface DBInterface<Entity> {
+	
+	public Entity getFromId(long id);
+	
 	public Cursor getListCursor();
-	public Entry convertCursorToEntry(Cursor c);
-	public long insert(Entry entry);
-	public int update(Entry entry);
+	
+	public Entity convertCursorToEntry(Cursor cursor);
+	
+	public long insert(Entity entry);
+	
+	public int update(Entity entry);
+	
 	public boolean isExist(int id);
-	public int delete(Entry news);
+	
+	public int delete(Entity entry);
+	
 	public int delete(int id);
-	public void updateTableFromXML() throws DOMException, IOException, ParserConfigurationException, SAXException, MalformedURLException;
 }
