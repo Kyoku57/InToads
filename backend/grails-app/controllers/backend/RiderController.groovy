@@ -4,12 +4,15 @@ import grails.converters.JSON
 
 class RiderController {
 
+
+    RiderService riderService;
+
+
     /**
      * retourne le détail d'un coureur
      * @return
      */
     def index() {
-        render("détail coureur")
 
         String id = params.id
 
@@ -20,5 +23,13 @@ class RiderController {
 
         render coureur as JSON
         return;
+    }
+
+    def riders(){
+
+        def coureurs = riderService.findAllCoureurs()
+
+        render coureurs as JSON
+        return
     }
 }
