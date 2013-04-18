@@ -1,29 +1,125 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Y0m-vf-tEA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Ru-oh-TOG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Team View Controller-->
+        <!--Team View Controller - Starting block-->
         <scene sceneID="q1F-IO-aOh">
             <objects>
                 <viewController id="Y0m-vf-tEA" customClass="TeamViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ay0-XR-bso">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="InToads.png" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-lW-V41"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" image="InToads.png" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-lW-V41"/>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCr-xO-Stg">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y0m-vf-tEA" id="uIx-dU-FAt"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gmh-cV-HUu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="4q3-Nl-WGl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y0m-vf-tEA" id="zjO-wp-mhN"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0N-ZG-EzJ">
+                                <color key="backgroundColor" red="0.2719286719305396" green="0.73372395833333326" blue="0.33425378802127137" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="ysj-sz-ZxC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAction:" destination="Y0m-vf-tEA" eventType="touchUpInside" id="a4D-lU-ybi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choix de la Team :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ae8-ny-GNO">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choix du Rider :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sir-sm-lM5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Hkx-yu-KZA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3O-Xi-pzW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="ur9-gQ-6Qy"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.9689753276759151" blue="0.88502465042947065" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1RI-lW-V41" firstAttribute="bottom" secondItem="ay0-XR-bso" secondAttribute="bottom" type="default" id="5xs-NH-JU7"/>
+                            <constraint firstItem="SCr-xO-Stg" firstAttribute="top" secondItem="Ae8-ny-GNO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BHa-dE-D3Y"/>
+                            <constraint firstItem="Ae8-ny-GNO" firstAttribute="top" secondItem="ay0-XR-bso" secondAttribute="top" constant="20" symbolic="YES" type="default" id="BJL-AY-wzx"/>
                             <constraint firstItem="1RI-lW-V41" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" type="default" id="CUs-7p-Y6X"/>
+                            <constraint firstAttribute="bottom" secondItem="q0N-ZG-EzJ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Ctd-wg-zpO"/>
+                            <constraint firstItem="L3O-Xi-pzW" firstAttribute="trailing" secondItem="ay0-XR-bso" secondAttribute="trailing" type="default" id="KWh-IF-GHP"/>
                             <constraint firstItem="1RI-lW-V41" firstAttribute="trailing" secondItem="ay0-XR-bso" secondAttribute="trailing" type="default" id="PPC-RT-T82"/>
+                            <constraint firstItem="q0N-ZG-EzJ" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RET-ly-Deb"/>
+                            <constraint firstItem="SCr-xO-Stg" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SBL-ag-BED"/>
+                            <constraint firstItem="q0N-ZG-EzJ" firstAttribute="centerX" secondItem="Gmh-cV-HUu" secondAttribute="centerX" type="default" id="Teb-Fc-ICT"/>
+                            <constraint firstItem="Gmh-cV-HUu" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XB1-Y5-t3o"/>
+                            <constraint firstItem="Sir-sm-lM5" firstAttribute="top" secondItem="ay0-XR-bso" secondAttribute="top" constant="123" type="user" id="b06-BU-mQj"/>
+                            <constraint firstItem="Sir-sm-lM5" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="b0W-6J-RVP"/>
+                            <constraint firstAttribute="trailing" secondItem="q0N-ZG-EzJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="coW-62-hwb"/>
+                            <constraint firstItem="Gmh-cV-HUu" firstAttribute="top" secondItem="Sir-sm-lM5" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="dWH-oG-JON"/>
+                            <constraint firstItem="L3O-Xi-pzW" firstAttribute="bottom" secondItem="ay0-XR-bso" secondAttribute="bottom" constant="216" type="user" id="gL0-jI-8hA"/>
+                            <constraint firstItem="Ae8-ny-GNO" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hHo-3Z-Hhk"/>
+                            <constraint firstItem="L3O-Xi-pzW" firstAttribute="leading" secondItem="ay0-XR-bso" secondAttribute="leading" type="default" id="jcJ-Qk-E0c"/>
                             <constraint firstItem="1RI-lW-V41" firstAttribute="top" secondItem="ay0-XR-bso" secondAttribute="top" type="default" id="kcG-VN-RBn"/>
+                            <constraint firstItem="SCr-xO-Stg" firstAttribute="trailing" secondItem="Gmh-cV-HUu" secondAttribute="trailing" type="default" id="mTV-rK-aUv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Starting block" id="imU-cp-OfR"/>
+                    <connections>
+                        <outlet property="riderField" destination="Gmh-cV-HUu" id="UK0-HO-9lg"/>
+                        <outlet property="riderLabel" destination="Sir-sm-lM5" id="MeR-zI-Vgc"/>
+                        <outlet property="selectionPicker" destination="L3O-Xi-pzW" id="cfV-IO-tU0"/>
+                        <outlet property="startButton" destination="q0N-ZG-EzJ" id="ZrR-0d-UaG"/>
+                        <outlet property="teamField" destination="SCr-xO-Stg" id="HMU-xK-PIY"/>
+                        <outlet property="teamLabel" destination="Ae8-ny-GNO" id="UYN-4K-Dfs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJO-8v-mw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="-124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6NF-nf-ddR">
+            <objects>
+                <navigationController id="3Ru-oh-TOG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FpQ-kk-Vha">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y0m-vf-tEA" kind="relationship" relationship="rootViewController" id="MM4-z3-aRJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxm-nZ-Bzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="182" y="-124"/>
         </scene>
@@ -37,6 +133,15 @@
         </class>
         <class className="TeamViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TeamViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="startAction:"/>
+                <relationship kind="outlet" name="riderField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="riderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="selectionPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="teamField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="teamLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
