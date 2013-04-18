@@ -14,7 +14,7 @@ object BackendServices {
   private val backend = "http://192.168.4.136:9000"
 
 
-  case class Rider(id:String,name:String,twitter:Option[String])
+  case class Rider(id:String,name:String,twitter:Option[String], teamName:String, teamId:String)
   case class Team(id:String,name:String,riders:List[Rider])
 
   def getRiderDetail(idRider:String):Future[Rider] =
@@ -22,7 +22,9 @@ object BackendServices {
       Rider(
         id = (json \ "id").as[String],
         name = (json \ "name").as[String],
-        twitter = (json \ "twitter").as[Option[String]]
+        twitter = (json \ "twitter").as[Option[String]],
+        teamName = (json \ "team"\"name").as[String],
+        teamId = (json \ "team" \"id").as[String]
       )
     }
 
