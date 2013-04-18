@@ -13,7 +13,8 @@ require.config({
         backbone:               'vendor/backbone-min',
         underscore:             'vendor/underscore-min',
         text:                   'vendor/require-text',
-        bootstrap:              'vendor/bootstrap.min'
+        bootstrap:              'vendor/bootstrap.min',
+        moment:             	'vendor/moment.min'
     }
 });
 
