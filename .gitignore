@@ -3,3 +3,5 @@ target
 /backend/backend.iml
 /backend/backend-grailsPlugins.iml
 /backend/.idea
+/android/InToads/bin
+/android/.metadata
