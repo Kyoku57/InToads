@@ -11,6 +11,7 @@ import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import lu.intech.intoads.R;
+import lu.intech.intoads.geolocalisation.GPSTracker;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
@@ -39,6 +40,10 @@ import android.app.Activity;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import android.view.View;
 import android.widget.Button;

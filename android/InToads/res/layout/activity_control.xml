@@ -48,4 +48,6 @@
         android:layout_alignLeft="@+id/labelTeam"
         android:text="@string/rider_name" />
 
+  
+
 </RelativeLayout>

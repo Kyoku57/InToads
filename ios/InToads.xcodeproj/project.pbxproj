@@ -12,6 +12,11 @@
 		AD86E1FA17205ED7009F036A /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E1F817205ED7009F036A /* TeamViewController.m */; };
 		AD86E1FC17205F6D009F036A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD86E1FB17205F6D009F036A /* Default@2x.png */; };
 		AD86E1FE17205F7E009F036A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AD86E1FD17205F7D009F036A /* Default.png */; };
+		AD86E20317206500009F036A /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E20217206500009F036A /* Team.m */; };
+		AD86E20617206500009F036A /* Rider.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E20517206500009F036A /* Rider.m */; };
+		AD86E20917206500009F036A /* GeolocEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E20817206500009F036A /* GeolocEvent.m */; };
+		AD86E20C17207256009F036A /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = AD86E20A17207256009F036A /* navbar.png */; };
+		AD86E20D17207256009F036A /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD86E20B17207256009F036A /* navbar@2x.png */; };
 		ADA585011715475900AEC4AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585001715475900AEC4AE /* UIKit.framework */; };
 		ADA585031715475900AEC4AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585021715475900AEC4AE /* Foundation.framework */; };
 		ADA585051715475900AEC4AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585041715475900AEC4AE /* CoreGraphics.framework */; };
@@ -58,6 +63,14 @@
 		AD86E1F817205ED7009F036A /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
 		AD86E1FB17205F6D009F036A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AD86E1FD17205F7D009F036A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AD86E20117206500009F036A /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		AD86E20217206500009F036A /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		AD86E20417206500009F036A /* Rider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rider.h; sourceTree = "<group>"; };
+		AD86E20517206500009F036A /* Rider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rider.m; sourceTree = "<group>"; };
+		AD86E20717206500009F036A /* GeolocEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeolocEvent.h; sourceTree = "<group>"; };
+		AD86E20817206500009F036A /* GeolocEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeolocEvent.m; sourceTree = "<group>"; };
+		AD86E20A17207256009F036A /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
+		AD86E20B17207256009F036A /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		ADA584FD1715475900AEC4AE /* InToads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InToads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA585001715475900AEC4AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ADA585021715475900AEC4AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,6 +138,8 @@
 		AD86E1E817205910009F036A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AD86E20A17207256009F036A /* navbar.png */,
+				AD86E20B17207256009F036A /* navbar@2x.png */,
 				ADA5853D17154B4700AEC4AE /* InToads.png */,
 			);
 			name = Images;
@@ -142,13 +157,35 @@
 		AD86E1ED17205ADD009F036A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				AD86E20017206417009F036A /* Model */,
+				AD86E1FF1720640C009F036A /* Helpers */,
 				ADA5851A1715475900AEC4AE /* InToads.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		AD86E1FF1720640C009F036A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
 				AD86E1EE17205B05009F036A /* CoreDataHelper.h */,
 				AD86E1EF17205B05009F036A /* CoreDataHelper.m */,
 				AD86E1F117205B27009F036A /* CoreDataManager.h */,
 				AD86E1F217205B27009F036A /* CoreDataManager.m */,
 			);
-			name = CoreData;
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		AD86E20017206417009F036A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD86E20717206500009F036A /* GeolocEvent.h */,
+				AD86E20817206500009F036A /* GeolocEvent.m */,
+				AD86E20417206500009F036A /* Rider.h */,
+				AD86E20517206500009F036A /* Rider.m */,
+				AD86E20117206500009F036A /* Team.h */,
+				AD86E20217206500009F036A /* Team.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		ADA584F41715475900AEC4AE = {
@@ -345,6 +382,8 @@
 				ADA5853E17154B4700AEC4AE /* InToads.png in Resources */,
 				AD86E1FC17205F6D009F036A /* Default@2x.png in Resources */,
 				AD86E1FE17205F7E009F036A /* Default.png in Resources */,
+				AD86E20C17207256009F036A /* navbar.png in Resources */,
+				AD86E20D17207256009F036A /* navbar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +427,9 @@
 				ADC6E0D1171D45F000410166 /* Reachability.m in Sources */,
 				AD86E1F017205B05009F036A /* CoreDataHelper.m in Sources */,
 				AD86E1F917205ED7009F036A /* TeamViewController.m in Sources */,
+				AD86E20317206500009F036A /* Team.m in Sources */,
+				AD86E20617206500009F036A /* Rider.m in Sources */,
+				AD86E20917206500009F036A /* GeolocEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
