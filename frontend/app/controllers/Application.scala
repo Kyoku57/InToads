@@ -21,11 +21,14 @@ object Application extends Controller {
   def index = Action {
     Ok(views.html.index())
   }
-  def stats = Action {
-    val toto = Rider("idtoto","toto",None,"","")
-    val tata = Rider("idtata","tata",None,"","")
-    val titi = Rider("idtiti","titi",None,"","")
-    Ok(views.html.stats(List(toto,tata,titi)))
+  def stats = Action {Async{
+    BackendServices.getTeams.map{teams=> Ok(views.html.stats(teams))}
+  
+  } 
+   
+    
+
+    
   }
 
   def position(riderId:String) = Action(parse.json){request=>
