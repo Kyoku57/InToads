@@ -3,7 +3,6 @@ package controllers
 import play.api._
 import play.api.mvc._
 import actors.Notification
-import actors.Notification.Message
 import akka.actor.{Props, Actor}
 import play.api.libs.iteratee.{Enumerator, Concurrent}
 import play.api.libs.json.JsValue
@@ -21,8 +20,14 @@ object Application extends Controller {
     Ok(views.html.index())
   }
 
-  def notif = Action(parse.json){request=>
-    Notification.newMessage(Message((request.body \ "message").as[String]+ " "+new Date().getTime))
+  def position(riderId:String) = Action(parse.json){request=>
+    Notification.newNotification("position",request.body)
+    Ok("ok")
+  }
+
+  def lap(riderId:String, start:Boolean) = Action(parse.json){request=>
+    val typeNotif = "lap-" + (if(start) "start" else "end")
+    Notification.newNotification(typeNotif,request.body)
     Ok("ok")
   }
 

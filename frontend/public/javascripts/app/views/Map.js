@@ -17,9 +17,9 @@ define([
         },
 
         initialize: function() {
-            stream.registerOn("newMessage", $.proxy(this.onNotification,this));
+            stream.registerOn("position", $.proxy(this.onNotification,this));
             var mapOptions = {
-                center: new google.maps.LatLng(49.106664,6.081901),
+                center: new google.maps.LatLng(48.31563396,6.57588517),
                 zoom: 15,
                 mapTypeId: google.maps.MapTypeId.HYBRID
             };
@@ -31,9 +31,10 @@ define([
         },
 
         onNotification: function(notif){
-            console.log("On notif in view : "+notif.message);
+            console.log("On notif in view : "+notif);
+            var msg = notif.data;
             if(this.marker==null){
-                var myLatlng = new google.maps.LatLng(49.106664,6.081901);
+                var myLatlng = new google.maps.LatLng(msg.lat,msg.long);
                 this.marker = new google.maps.Marker({
                     position: myLatlng,
                     map: this.map,
@@ -41,7 +42,7 @@ define([
                 });
             }
             else
-               this.marker.setPosition(new google.maps.LatLng(49.105539,6.074409));
+               this.marker.setPosition(new google.maps.LatLng(msg.lat,msg.long));
         }
 
     });
