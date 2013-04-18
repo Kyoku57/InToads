@@ -12,3 +12,5 @@ POST    /position/:riderId          controllers.Application.position(riderId:Str
 POST    /lap/start/:riderId         controllers.Application.lap(riderId:String,start:Boolean=true)
 POST    /lap/end/:riderId           controllers.Application.lap(riderId:String,start:Boolean=false)
 GET     /live                       controllers.Application.liveStream
+
+GET     /teams                      controllers.Application.teams

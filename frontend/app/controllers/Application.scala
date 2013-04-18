@@ -5,7 +5,7 @@ import play.api.mvc._
 import actors.Notification
 import akka.actor.{Props, Actor}
 import play.api.libs.iteratee.{Enumerator, Concurrent}
-import play.api.libs.json.JsValue
+import play.api.libs.json.{JsArray, Json, JsValue}
 import play.libs.Akka
 import scala.concurrent.duration._
 import akka.util.Timeout
@@ -13,6 +13,7 @@ import play.api.libs.EventSource
 import akka.pattern.ask
 import concurrent.ExecutionContext.Implicits.global
 import java.util.Date
+import ws.BackendServices
 
 object Application extends Controller {
   
@@ -38,6 +39,24 @@ object Application extends Controller {
       (actor ? "start").mapTo[Enumerator[JsValue]].map {
         chunks =>
           Ok.stream((chunks) &> EventSource()).as("text/event-stream")
+      }
+    }
+  }
+
+  def teams = Action{
+    Async{
+      BackendServices.getTeams.map{teams=>
+        Ok(JsArray( teams.map{team=>
+          Json.obj(
+            "id"-> team.id,
+            "name" -> team.name,
+            "riders" -> team.riders.map{rider=>Json.obj(
+                "id" -> rider.id,
+                "name" -> rider.name
+              )
+            }
+          )
+        }))
       }
     }
   }
