@@ -13,11 +13,18 @@ import play.api.libs.EventSource
 import akka.pattern.ask
 import concurrent.ExecutionContext.Implicits.global
 import java.util.Date
+import models._
+
 
 object Application extends Controller {
-  
   def index = Action {
     Ok(views.html.index())
+  }
+  def stats = Action {
+    val toto = Rider("idtoto","toto",None)
+    val tata = Rider("idtata","tata",None)
+    val titi = Rider("idtiti","titi",None)
+    Ok(views.html.stats(List(toto,tata,titi)))
   }
 
   def position(riderId:String) = Action(parse.json){request=>
