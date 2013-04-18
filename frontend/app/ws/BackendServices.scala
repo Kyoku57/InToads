@@ -1,8 +1,8 @@
 package ws
 
 import play.api.libs.ws.WS
-import play.api.libs.json.JsValue
-import scala.concurrent.Future
+import play.api.libs.json.{JsArray, JsValue}
+import scala.concurrent.{Future}
 import concurrent.ExecutionContext.Implicits.global
 
 /**
@@ -15,6 +15,7 @@ object BackendServices {
 
 
   case class Rider(id:String,name:String,twitter:Option[String])
+  case class Team(id:String,name:String,riders:List[Rider])
 
   def getRiderDetail(idRider:String):Future[Rider] =
     WS.url(backend+ "/rider/"+idRider).get().map(_.json).map{json=>
@@ -24,5 +25,17 @@ object BackendServices {
         twitter = (json \ "twitter").as[Option[String]]
       )
     }
+
+  /*def getTeams:Future[Seq[Team]]=
+    WS.url(backend + "/teams").get().map(_.json).map{teams=>
+      teams.asInstanceOf[JsArray].value.map{team=>
+        Await.b WS.url(backend + "/team/"+((team \ "id").as[String])).get().map(_.json).map{riders=>
+          riders.asInstanceOf[JsArray].value.map{rider=>
+            Rider((rider \ "id").as[String],(rider \ "name").as[String],None)
+          }
+        }
+      }
+    }*/
+
 
 }
