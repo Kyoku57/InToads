@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD86E1F017205B05009F036A /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E1EF17205B05009F036A /* CoreDataHelper.m */; };
+		AD86E1F917205ED7009F036A /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E1F817205ED7009F036A /* TeamViewController.m */; };
+		AD86E1FA17205ED7009F036A /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E1F817205ED7009F036A /* TeamViewController.m */; };
+		AD86E1FC17205F6D009F036A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD86E1FB17205F6D009F036A /* Default@2x.png */; };
+		AD86E1FE17205F7E009F036A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AD86E1FD17205F7D009F036A /* Default.png */; };
 		ADA585011715475900AEC4AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585001715475900AEC4AE /* UIKit.framework */; };
 		ADA585031715475900AEC4AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585021715475900AEC4AE /* Foundation.framework */; };
 		ADA585051715475900AEC4AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585041715475900AEC4AE /* CoreGraphics.framework */; };
@@ -45,6 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD86E1EE17205B05009F036A /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		AD86E1EF17205B05009F036A /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		AD86E1F117205B27009F036A /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		AD86E1F217205B27009F036A /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		AD86E1F717205ED7009F036A /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
+		AD86E1F817205ED7009F036A /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		AD86E1FB17205F6D009F036A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AD86E1FD17205F7D009F036A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		ADA584FD1715475900AEC4AE /* InToads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InToads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA585001715475900AEC4AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ADA585021715475900AEC4AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,9 +130,32 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		AD86E1E917205A24009F036A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD86E1F717205ED7009F036A /* TeamViewController.h */,
+				AD86E1F817205ED7009F036A /* TeamViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AD86E1ED17205ADD009F036A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5851A1715475900AEC4AE /* InToads.xcdatamodeld */,
+				AD86E1EE17205B05009F036A /* CoreDataHelper.h */,
+				AD86E1EF17205B05009F036A /* CoreDataHelper.m */,
+				AD86E1F117205B27009F036A /* CoreDataManager.h */,
+				AD86E1F217205B27009F036A /* CoreDataManager.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		ADA584F41715475900AEC4AE = {
 			isa = PBXGroup;
 			children = (
+				AD86E1FD17205F7D009F036A /* Default.png */,
+				AD86E1FB17205F6D009F036A /* Default@2x.png */,
 				ADA585081715475900AEC4AE /* InToads */,
 				ADA5852A1715475900AEC4AE /* InToadsTests */,
 				ADA584FF1715475900AEC4AE /* Frameworks */,
@@ -153,12 +189,13 @@
 		ADA585081715475900AEC4AE /* InToads */ = {
 			isa = PBXGroup;
 			children = (
+				AD86E1ED17205ADD009F036A /* CoreData */,
+				AD86E1E917205A24009F036A /* View Controllers */,
 				AD86E1E817205910009F036A /* Images */,
 				ADC6E0D2171D45F500410166 /* Libraries */,
 				ADC6E0CB171D45AD00410166 /* Services */,
 				ADA585111715475900AEC4AE /* AppDelegate.h */,
 				ADA585121715475900AEC4AE /* AppDelegate.m */,
-				ADA5851A1715475900AEC4AE /* InToads.xcdatamodeld */,
 				ADA5853B1715477A00AEC4AE /* IPhoneStoryboard.storyboard */,
 				ADA585091715475900AEC4AE /* Supporting Files */,
 			);
@@ -306,6 +343,8 @@
 				ADA585191715475900AEC4AE /* Default-568h@2x.png in Resources */,
 				ADA5853C1715477A00AEC4AE /* IPhoneStoryboard.storyboard in Resources */,
 				ADA5853E17154B4700AEC4AE /* InToads.png in Resources */,
+				AD86E1FC17205F6D009F036A /* Default@2x.png in Resources */,
+				AD86E1FE17205F7E009F036A /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +386,8 @@
 				ADC6E0CA171D45A800410166 /* HTTPRequests.m in Sources */,
 				ADC6E0CE171D45C400410166 /* HTTPCookies.m in Sources */,
 				ADC6E0D1171D45F000410166 /* Reachability.m in Sources */,
+				AD86E1F017205B05009F036A /* CoreDataHelper.m in Sources */,
+				AD86E1F917205ED7009F036A /* TeamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA585321715475900AEC4AE /* InToadsTests.m in Sources */,
+				AD86E1FA17205ED7009F036A /* TeamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +455,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -438,7 +480,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
