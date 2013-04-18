@@ -6,7 +6,7 @@ team1 = ["SDE","AAA","CTN","MBR","WTI"]
 altStart = 200
 
 def sendNotif(url,data)
-  ["http://localhost:9000"].each do|srv|
+  ["http://192.168.0.111:9000","http://192.168.0.115:9000","http://192.168.0.105:9000","http://192.168.0.106:9000","http://192.168.4.103:9000"].each do|srv|
     begin
       RestClient.post srv+url, data.to_json, :content_type => :json
     rescue
