@@ -27,6 +27,16 @@ object BackendServices {
         teamId = (json \ "team" \"id").as[String]
       )
     }
+  
+    def getRiderStats(idRider:String):Future[RiderStats] =
+    WS.url(backend+ "/rider/"+idRider).get().map(_.json).map{json=>
+      RiderStats(
+        riderid = (json \ "id").as[String],
+        bestlap = (json \ "bestLap").as[Int],
+        status = (json \ "status").as[String],
+        laps = (json \ "nbrLaps").as[Int]
+      )
+    }
 
   /*def getTeams:Future[Seq[Team]]=
     WS.url(backend + "/teams").get().map(_.json).map{teams=>
