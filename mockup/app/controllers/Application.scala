@@ -48,7 +48,11 @@ object Application extends Controller {
       Json.obj(
         "id" -> "SDE",
         "name" -> "Sébastien",
-        "twitter" -> "Kyoku57"
+        "twitter" -> "Kyoku57",
+        "team" -> Json.obj(
+          "id" -> "team1",
+          "name" -> "Les Walker Texas"
+        )
       )
     )
   }
