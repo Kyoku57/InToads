@@ -14,40 +14,38 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="32dp"
+        android:enabled="false"
         android:text="@string/start_action" />
+
+    <TextView
+        android:id="@+id/labelTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_start"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:text="@string/team_select" />
+
+    <Spinner
+        android:id="@+id/team_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/riders_spinner"
+        android:layout_below="@+id/labelTeam" />
+
+    <Spinner
+        android:id="@+id/riders_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labelRider"
+        android:layout_centerVertical="true" />
 
     <TextView
         android:id="@+id/labelRider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/riders_spinner"
-        android:layout_alignLeft="@+id/riders_spinner"
+        android:layout_alignLeft="@+id/labelTeam"
         android:text="@string/rider_name" />
-    
-    <Spinner
-        android:id="@+id/riders_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button_start"
-        android:layout_alignLeft="@+id/button_start"
-        android:layout_alignRight="@+id/button_start"
-        android:layout_marginBottom="40dp" />
-
-    <Spinner
-        android:id="@+id/team_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/labelRider"
-        android:layout_alignLeft="@+id/labelRider"
-        android:layout_marginBottom="32dp" />
-
-    <TextView
-        android:id="@+id/labelTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/team_spinner"
-        android:layout_alignLeft="@+id/team_spinner"
-        android:layout_marginBottom="20dp"
-        android:text="@string/team_select" />
 
 </RelativeLayout>
