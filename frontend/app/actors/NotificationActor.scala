@@ -29,7 +29,10 @@ object Notification{
             "rider" -> Json.obj(
               "id"-> rider.id,
               "name" -> rider.name,
-              "twitter" -> rider.twitter
+              "twitter" -> rider.twitter,
+              "twitter" -> rider.twitter,
+              "teamId" -> rider.teamId,
+              "teamName" -> rider.teamName
             )
           ))
         }
@@ -43,7 +46,10 @@ object Notification{
             "rider" -> Json.obj(
               "id"-> rider.id,
               "name" -> rider.name,
-              "twitter" -> rider.twitter
+              "twitter" -> rider.twitter,
+              "twitter" -> rider.twitter,
+              "teamId" -> rider.teamId,
+              "teamName" -> rider.teamName
             )
           ))
         }
@@ -57,7 +63,9 @@ object Notification{
             "rider" -> Json.obj(
               "id"-> rider.id,
               "name" -> rider.name,
-              "twitter" -> rider.twitter
+              "twitter" -> rider.twitter,
+              "teamId" -> rider.teamId,
+              "teamName" -> rider.teamName
             )
           ))
         }
