@@ -1,4 +1,25 @@
 #liveMap{
-    width: 100%;
+    width: 70%;
     height: 500px;
+    display: table-cell;
+}
+
+#team{
+    width: 30%;
+    height: 500px;
+}
+#header{
+	margin-top:10px;
+	margin-right:3%;  
+}
+
+
+#log{
+	display: table-cell;
+}
+
+#container{
+    display: table;
+    width: 100%;
+    margin: 10px;
 }

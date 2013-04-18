@@ -19,7 +19,7 @@ define([
         initialize: function() {
             stream.registerOn("position", $.proxy(this.onNotification,this));
             var mapOptions = {
-                center: new google.maps.LatLng(48.31563396,6.57588517),
+                center: new google.maps.LatLng(48.3474458,6.53568137),
                 zoom: 15,
                 mapTypeId: google.maps.MapTypeId.HYBRID
             };

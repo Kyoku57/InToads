@@ -1,5 +1,16 @@
 package lu.intech.intoads.db;
 
+<<<<<<< HEAD
+=======
+import java.io.IOException;
+import java.net.MalformedURLException;
+
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.DOMException;
+import org.xml.sax.SAXException;
+
+>>>>>>> d05b757b3834d334a0563593bfa58f41384aaece
 import android.database.Cursor;
 
 /**

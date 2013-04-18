@@ -100,6 +100,7 @@ static CoreDataManager *sharedInstance = nil;
     return param;
 }
 
+
 #pragma mark - City objects access and save methods in the database
 
 - (City *) createOrUpdateCityWithName:(NSString *)cityName andLocation:(CLLocation *)cityCenter forId:(NSNumber *)cityId
