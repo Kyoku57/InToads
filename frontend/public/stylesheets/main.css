@@ -2,7 +2,6 @@
     width: 70%;
     height: 500px;
     display: table-cell;
-
 }
 
 #team{
@@ -28,8 +27,8 @@
 #container{
     display: table;
     width: 100%;
+    margin: 10px;
+
 }
-
-
 
 
