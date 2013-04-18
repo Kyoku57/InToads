@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADA585011715475900AEC4AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585001715475900AEC4AE /* UIKit.framework */; };
+		ADA585031715475900AEC4AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585021715475900AEC4AE /* Foundation.framework */; };
+		ADA585051715475900AEC4AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585041715475900AEC4AE /* CoreGraphics.framework */; };
+		ADA585071715475900AEC4AE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585061715475900AEC4AE /* CoreData.framework */; };
+		ADA5850D1715475900AEC4AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA5850B1715475900AEC4AE /* InfoPlist.strings */; };
+		ADA5850F1715475900AEC4AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5850E1715475900AEC4AE /* main.m */; };
+		ADA585131715475900AEC4AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA585121715475900AEC4AE /* AppDelegate.m */; };
+		ADA585151715475900AEC4AE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA585141715475900AEC4AE /* Default.png */; };
+		ADA585171715475900AEC4AE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA585161715475900AEC4AE /* Default@2x.png */; };
+		ADA585191715475900AEC4AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA585181715475900AEC4AE /* Default-568h@2x.png */; };
+		ADA5851C1715475900AEC4AE /* InToads.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADA5851A1715475900AEC4AE /* InToads.xcdatamodeld */; };
+		ADA585241715475900AEC4AE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585231715475900AEC4AE /* SenTestingKit.framework */; };
+		ADA585251715475900AEC4AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585001715475900AEC4AE /* UIKit.framework */; };
+		ADA585261715475900AEC4AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585021715475900AEC4AE /* Foundation.framework */; };
+		ADA585271715475900AEC4AE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585061715475900AEC4AE /* CoreData.framework */; };
+		ADA5852F1715475900AEC4AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA5852D1715475900AEC4AE /* InfoPlist.strings */; };
+		ADA585321715475900AEC4AE /* InToadsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA585311715475900AEC4AE /* InToadsTests.m */; };
+		ADA5853C1715477A00AEC4AE /* IPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA5853B1715477A00AEC4AE /* IPhoneStoryboard.storyboard */; };
+		ADA5853E17154B4700AEC4AE /* InToads.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5853D17154B4700AEC4AE /* InToads.png */; };
+		ADC6E0C9171D45A800410166 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC6E0C6171D45A800410166 /* HTTPClient.m */; };
+		ADC6E0CA171D45A800410166 /* HTTPRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC6E0C8171D45A800410166 /* HTTPRequests.m */; };
+		ADC6E0CE171D45C400410166 /* HTTPCookies.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC6E0CD171D45C400410166 /* HTTPCookies.m */; };
+		ADC6E0D1171D45F000410166 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC6E0D0171D45F000410166 /* Reachability.m */; };
+		ADC6E0D6171D479C00410166 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC6E0D5171D479C00410166 /* SystemConfiguration.framework */; };
+		ADC6E0D8171D47AC00410166 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC6E0D7171D47AC00410166 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADA585281715475900AEC4AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADA584F51715475900AEC4AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADA584FC1715475900AEC4AE;
+			remoteInfo = InToads;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ADA584FD1715475900AEC4AE /* InToads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InToads.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA585001715475900AEC4AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ADA585021715475900AEC4AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ADA585041715475900AEC4AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ADA585061715475900AEC4AE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ADA5850A1715475900AEC4AE /* InToads-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InToads-Info.plist"; sourceTree = "<group>"; };
+		ADA5850C1715475900AEC4AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADA5850E1715475900AEC4AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ADA585101715475900AEC4AE /* InToads-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InToads-Prefix.pch"; sourceTree = "<group>"; };
+		ADA585111715475900AEC4AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ADA585121715475900AEC4AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ADA585141715475900AEC4AE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		ADA585161715475900AEC4AE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		ADA585181715475900AEC4AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		ADA5851B1715475900AEC4AE /* InToads.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InToads.xcdatamodel; sourceTree = "<group>"; };
+		ADA585221715475900AEC4AE /* InToadsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InToadsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA585231715475900AEC4AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		ADA5852C1715475900AEC4AE /* InToadsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InToadsTests-Info.plist"; sourceTree = "<group>"; };
+		ADA5852E1715475900AEC4AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADA585301715475900AEC4AE /* InToadsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InToadsTests.h; sourceTree = "<group>"; };
+		ADA585311715475900AEC4AE /* InToadsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InToadsTests.m; sourceTree = "<group>"; };
+		ADA5853B1715477A00AEC4AE /* IPhoneStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = IPhoneStoryboard.storyboard; path = ../IPhoneStoryboard.storyboard; sourceTree = "<group>"; };
+		ADA5853D17154B4700AEC4AE /* InToads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InToads.png; sourceTree = "<group>"; };
+		ADC6E0C5171D45A800410166 /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		ADC6E0C6171D45A800410166 /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		ADC6E0C7171D45A800410166 /* HTTPRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequests.h; sourceTree = "<group>"; };
+		ADC6E0C8171D45A800410166 /* HTTPRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequests.m; sourceTree = "<group>"; };
+		ADC6E0CC171D45C400410166 /* HTTPCookies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPCookies.h; sourceTree = "<group>"; };
+		ADC6E0CD171D45C400410166 /* HTTPCookies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPCookies.m; sourceTree = "<group>"; };
+		ADC6E0CF171D45F000410166 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		ADC6E0D0171D45F000410166 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		ADC6E0D4171D466500410166 /* Consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
+		ADC6E0D5171D479C00410166 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		ADC6E0D7171D47AC00410166 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADA584FA1715475900AEC4AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADC6E0D8171D47AC00410166 /* CoreLocation.framework in Frameworks */,
+				ADC6E0D6171D479C00410166 /* SystemConfiguration.framework in Frameworks */,
+				ADA585011715475900AEC4AE /* UIKit.framework in Frameworks */,
+				ADA585031715475900AEC4AE /* Foundation.framework in Frameworks */,
+				ADA585051715475900AEC4AE /* CoreGraphics.framework in Frameworks */,
+				ADA585071715475900AEC4AE /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA5851E1715475900AEC4AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA585241715475900AEC4AE /* SenTestingKit.framework in Frameworks */,
+				ADA585251715475900AEC4AE /* UIKit.framework in Frameworks */,
+				ADA585261715475900AEC4AE /* Foundation.framework in Frameworks */,
+				ADA585271715475900AEC4AE /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADA584F41715475900AEC4AE = {
+			isa = PBXGroup;
+			children = (
+				ADC6E0D7171D47AC00410166 /* CoreLocation.framework */,
+				ADC6E0D5171D479C00410166 /* SystemConfiguration.framework */,
+				ADA5853D17154B4700AEC4AE /* InToads.png */,
+				ADA585081715475900AEC4AE /* InToads */,
+				ADA5852A1715475900AEC4AE /* InToadsTests */,
+				ADA584FF1715475900AEC4AE /* Frameworks */,
+				ADA584FE1715475900AEC4AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADA584FE1715475900AEC4AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADA584FD1715475900AEC4AE /* InToads.app */,
+				ADA585221715475900AEC4AE /* InToadsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADA584FF1715475900AEC4AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADA585001715475900AEC4AE /* UIKit.framework */,
+				ADA585021715475900AEC4AE /* Foundation.framework */,
+				ADA585041715475900AEC4AE /* CoreGraphics.framework */,
+				ADA585061715475900AEC4AE /* CoreData.framework */,
+				ADA585231715475900AEC4AE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADA585081715475900AEC4AE /* InToads */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6E0D2171D45F500410166 /* Libraries */,
+				ADC6E0CB171D45AD00410166 /* Services */,
+				ADA585111715475900AEC4AE /* AppDelegate.h */,
+				ADA585121715475900AEC4AE /* AppDelegate.m */,
+				ADA5851A1715475900AEC4AE /* InToads.xcdatamodeld */,
+				ADA5853B1715477A00AEC4AE /* IPhoneStoryboard.storyboard */,
+				ADA585091715475900AEC4AE /* Supporting Files */,
+			);
+			path = InToads;
+			sourceTree = "<group>";
+		};
+		ADA585091715475900AEC4AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5850A1715475900AEC4AE /* InToads-Info.plist */,
+				ADA5850B1715475900AEC4AE /* InfoPlist.strings */,
+				ADA5850E1715475900AEC4AE /* main.m */,
+				ADA585101715475900AEC4AE /* InToads-Prefix.pch */,
+				ADA585141715475900AEC4AE /* Default.png */,
+				ADA585161715475900AEC4AE /* Default@2x.png */,
+				ADA585181715475900AEC4AE /* Default-568h@2x.png */,
+				ADC6E0D4171D466500410166 /* Consts.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADA5852A1715475900AEC4AE /* InToadsTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADA585301715475900AEC4AE /* InToadsTests.h */,
+				ADA585311715475900AEC4AE /* InToadsTests.m */,
+				ADA5852B1715475900AEC4AE /* Supporting Files */,
+			);
+			path = InToadsTests;
+			sourceTree = "<group>";
+		};
+		ADA5852B1715475900AEC4AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5852C1715475900AEC4AE /* InToadsTests-Info.plist */,
+				ADA5852D1715475900AEC4AE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADC6E0CB171D45AD00410166 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6E0CC171D45C400410166 /* HTTPCookies.h */,
+				ADC6E0CD171D45C400410166 /* HTTPCookies.m */,
+				ADC6E0C5171D45A800410166 /* HTTPClient.h */,
+				ADC6E0C6171D45A800410166 /* HTTPClient.m */,
+				ADC6E0C7171D45A800410166 /* HTTPRequests.h */,
+				ADC6E0C8171D45A800410166 /* HTTPRequests.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		ADC6E0D2171D45F500410166 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6E0D3171D460500410166 /* Reachability */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		ADC6E0D3171D460500410166 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6E0CF171D45F000410166 /* Reachability.h */,
+				ADC6E0D0171D45F000410166 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADA584FC1715475900AEC4AE /* InToads */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA585351715475900AEC4AE /* Build configuration list for PBXNativeTarget "InToads" */;
+			buildPhases = (
+				ADA584F91715475900AEC4AE /* Sources */,
+				ADA584FA1715475900AEC4AE /* Frameworks */,
+				ADA584FB1715475900AEC4AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InToads;
+			productName = InToads;
+			productReference = ADA584FD1715475900AEC4AE /* InToads.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADA585211715475900AEC4AE /* InToadsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA585381715475900AEC4AE /* Build configuration list for PBXNativeTarget "InToadsTests" */;
+			buildPhases = (
+				ADA5851D1715475900AEC4AE /* Sources */,
+				ADA5851E1715475900AEC4AE /* Frameworks */,
+				ADA5851F1715475900AEC4AE /* Resources */,
+				ADA585201715475900AEC4AE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADA585291715475900AEC4AE /* PBXTargetDependency */,
+			);
+			name = InToadsTests;
+			productName = InToadsTests;
+			productReference = ADA585221715475900AEC4AE /* InToadsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADA584F51715475900AEC4AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = InTech;
+			};
+			buildConfigurationList = ADA584F81715475900AEC4AE /* Build configuration list for PBXProject "InToads" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ADA584F41715475900AEC4AE;
+			productRefGroup = ADA584FE1715475900AEC4AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADA584FC1715475900AEC4AE /* InToads */,
+				ADA585211715475900AEC4AE /* InToadsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADA584FB1715475900AEC4AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA5850D1715475900AEC4AE /* InfoPlist.strings in Resources */,
+				ADA585151715475900AEC4AE /* Default.png in Resources */,
+				ADA585171715475900AEC4AE /* Default@2x.png in Resources */,
+				ADA585191715475900AEC4AE /* Default-568h@2x.png in Resources */,
+				ADA5853C1715477A00AEC4AE /* IPhoneStoryboard.storyboard in Resources */,
+				ADA5853E17154B4700AEC4AE /* InToads.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA5851F1715475900AEC4AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA5852F1715475900AEC4AE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ADA585201715475900AEC4AE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADA584F91715475900AEC4AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA5850F1715475900AEC4AE /* main.m in Sources */,
+				ADA585131715475900AEC4AE /* AppDelegate.m in Sources */,
+				ADA5851C1715475900AEC4AE /* InToads.xcdatamodeld in Sources */,
+				ADC6E0C9171D45A800410166 /* HTTPClient.m in Sources */,
+				ADC6E0CA171D45A800410166 /* HTTPRequests.m in Sources */,
+				ADC6E0CE171D45C400410166 /* HTTPCookies.m in Sources */,
+				ADC6E0D1171D45F000410166 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA5851D1715475900AEC4AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA585321715475900AEC4AE /* InToadsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADA585291715475900AEC4AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADA584FC1715475900AEC4AE /* InToads */;
+			targetProxy = ADA585281715475900AEC4AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ADA5850B1715475900AEC4AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADA5850C1715475900AEC4AE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ADA5852D1715475900AEC4AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADA5852E1715475900AEC4AE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADA585331715475900AEC4AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ADA585341715475900AEC4AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADA585361715475900AEC4AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InToads/InToads-Prefix.pch";
+				INFOPLIST_FILE = "InToads/InToads-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ADA585371715475900AEC4AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InToads/InToads-Prefix.pch";
+				INFOPLIST_FILE = "InToads/InToads-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ADA585391715475900AEC4AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InToads.app/InToads";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InToads/InToads-Prefix.pch";
+				INFOPLIST_FILE = "InToadsTests/InToadsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		ADA5853A1715475900AEC4AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InToads.app/InToads";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InToads/InToads-Prefix.pch";
+				INFOPLIST_FILE = "InToadsTests/InToadsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADA584F81715475900AEC4AE /* Build configuration list for PBXProject "InToads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA585331715475900AEC4AE /* Debug */,
+				ADA585341715475900AEC4AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA585351715475900AEC4AE /* Build configuration list for PBXNativeTarget "InToads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA585361715475900AEC4AE /* Debug */,
+				ADA585371715475900AEC4AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA585381715475900AEC4AE /* Build configuration list for PBXNativeTarget "InToadsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA585391715475900AEC4AE /* Debug */,
+				ADA5853A1715475900AEC4AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ADA5851A1715475900AEC4AE /* InToads.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ADA5851B1715475900AEC4AE /* InToads.xcdatamodel */,
+			);
+			currentVersion = ADA5851B1715475900AEC4AE /* InToads.xcdatamodel */;
+			path = InToads.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ADA584F51715475900AEC4AE /* Project object */;
+}
