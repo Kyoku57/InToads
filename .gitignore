@@ -3,3 +3,4 @@ target
 /backend/backend.iml
 /backend/backend-grailsPlugins.iml
 /backend/.idea
+*.class
