@@ -68,7 +68,7 @@ define([
 	            else
 	               this.walker_rider.setPosition(new google.maps.LatLng(msg.lat,msg.long));
 	            
-            }else  if(notif.rider.teamId == 'team1'){
+            }else  if(notif.rider.teamId == 'team3'){
 	            if(this.unchained_marker==null){
 	                var myLatlng = new google.maps.LatLng(msg.lat,msg.long);
 	                this.unchained_marker = new google.maps.Marker({
