@@ -67,7 +67,7 @@
 		ADA585301715475900AEC4AE /* InToadsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InToadsTests.h; sourceTree = "<group>"; };
 		ADA585311715475900AEC4AE /* InToadsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InToadsTests.m; sourceTree = "<group>"; };
 		ADA5853B1715477A00AEC4AE /* IPhoneStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = IPhoneStoryboard.storyboard; path = ../IPhoneStoryboard.storyboard; sourceTree = "<group>"; };
-		ADA5853D17154B4700AEC4AE /* InToads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InToads.png; sourceTree = "<group>"; };
+		ADA5853D17154B4700AEC4AE /* InToads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InToads.png; sourceTree = SOURCE_ROOT; };
 		ADC6E0C5171D45A800410166 /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		ADC6E0C6171D45A800410166 /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
 		ADC6E0C7171D45A800410166 /* HTTPRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequests.h; sourceTree = "<group>"; };
@@ -109,12 +109,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD86E1E817205910009F036A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5853D17154B4700AEC4AE /* InToads.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		ADA584F41715475900AEC4AE = {
 			isa = PBXGroup;
 			children = (
-				ADC6E0D7171D47AC00410166 /* CoreLocation.framework */,
-				ADC6E0D5171D479C00410166 /* SystemConfiguration.framework */,
-				ADA5853D17154B4700AEC4AE /* InToads.png */,
 				ADA585081715475900AEC4AE /* InToads */,
 				ADA5852A1715475900AEC4AE /* InToadsTests */,
 				ADA584FF1715475900AEC4AE /* Frameworks */,
@@ -134,6 +139,8 @@
 		ADA584FF1715475900AEC4AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADC6E0D7171D47AC00410166 /* CoreLocation.framework */,
+				ADC6E0D5171D479C00410166 /* SystemConfiguration.framework */,
 				ADA585001715475900AEC4AE /* UIKit.framework */,
 				ADA585021715475900AEC4AE /* Foundation.framework */,
 				ADA585041715475900AEC4AE /* CoreGraphics.framework */,
@@ -146,6 +153,7 @@
 		ADA585081715475900AEC4AE /* InToads */ = {
 			isa = PBXGroup;
 			children = (
+				AD86E1E817205910009F036A /* Images */,
 				ADC6E0D2171D45F500410166 /* Libraries */,
 				ADC6E0CB171D45AD00410166 /* Services */,
 				ADA585111715475900AEC4AE /* AppDelegate.h */,
