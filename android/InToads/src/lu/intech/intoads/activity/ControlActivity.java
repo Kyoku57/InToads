@@ -1,13 +1,9 @@
 package lu.intech.intoads.activity;
 
 import lu.intech.intoads.R;
-import lu.intech.intoads.R.layout;
-import lu.intech.intoads.R.menu;
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 public class ControlActivity extends Activity {
 
