@@ -10,14 +10,13 @@ import android.os.IBinder;
 
 /*
  * author : nsanitas
- * goal : handle the periodic capture of geolocation data to back(front)-end
+ * goal : handle the periodic send of geolocation data to back(front)-end
  */
 
-public class GeolocationService extends Service {
+public class CommunicationService extends Service {
 
 	// constant
-	// TODO : define this in a 'settings' screen?
-	public static final long NOTIFY_INTERVAL = 20 * 1000; // 20 seconds
+	public static final long NOTIFY_INTERVAL = 30 * 1000; // 30 seconds
 
 	// run on another Thread to avoid crash
 	private Handler mHandler = new Handler();
@@ -39,10 +38,10 @@ public class GeolocationService extends Service {
 			mTimer = new Timer();
 		}
 		// schedule task
-		mTimer.scheduleAtFixedRate(new StorePosition(), 0, NOTIFY_INTERVAL);
+		mTimer.scheduleAtFixedRate(new SendPosition(), 0, NOTIFY_INTERVAL);
 	}
 
-	class StorePosition extends TimerTask {
+	class SendPosition extends TimerTask {
 
 		@Override
 		public void run() {
