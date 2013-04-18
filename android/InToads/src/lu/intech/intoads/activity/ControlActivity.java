@@ -1,5 +1,8 @@
 package lu.intech.intoads.activity;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5d84af67ea5f76918f4b145b6fd809a9a069ff57
 import java.util.ArrayList;
 
 import lu.intech.intoads.R;
@@ -8,9 +11,17 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+<<<<<<< HEAD
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+=======
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
+>>>>>>> 5d84af67ea5f76918f4b145b6fd809a9a069ff57
 
 public class ControlActivity extends Activity {
 
@@ -64,23 +75,17 @@ public class ControlActivity extends Activity {
         });
 		
 		//On select
-		//ToDo : GetRiders
-		//ToDo : SaveRiders
+		//TODO : GetRiders
+		//TODO : SaveRiders
 		
 		//On select
-		//ToDo : Save pref
-		//ToDo : Enable start button
-
-		/*Spinner spinner = (Spinner) findViewById(R.id.team_spinnerR);
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter
-				.createFromResource(this, R.array.array_team,
-						android.R.layout.simple_spinner_item);
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spinner.setAdapter(adapter);
-		
-		
-		
-		spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+		//TODO : Save pref
+		//TODO : Enable start button
+        
+        
+        
+        
+		/*spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1,
@@ -104,13 +109,19 @@ public class ControlActivity extends Activity {
 		return true;
 	}
 	
+	/**
+	 * Méthode qui charge le spinner Team avec la liste des Team passée en paramètre
+	 * @param listTeam la liste des Team 
+	 */
 	public void loadTeams(ArrayList<Team> listTeam){
+		//On récupère le spinner pour les teams
 		Spinner spinner = (Spinner) findViewById(R.id.team_spinner);
-		/*ArrayAdapter<CharSequence> adapter = ArrayAdapter
-				.createFromResource(this, R.array.array_team,
-						android.R.layout.simple_spinner_item);
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spinner.setAdapter(adapter);*/
+		
+		//Création de l'adapter, fournit avec la liste des Team
+		ArrayAdapter<Team> adapter = new ArrayAdapter<Team>(this, android.R.layout.simple_spinner_item,	listTeam);
+		
+		//Le spinner de team utilise l'adapter précédemment créé
+		spinner.setAdapter(adapter);
 	}
 
 }
