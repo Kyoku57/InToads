@@ -21,13 +21,13 @@ object Application extends Controller {
   }
 
   def position(riderId:String) = Action(parse.json){request=>
-    Notification.newNotification("position",request.body)
+    Notification.newNotification("position",request.body,riderId)
     Ok("ok")
   }
 
   def lap(riderId:String, start:Boolean) = Action(parse.json){request=>
     val typeNotif = "lap-" + (if(start) "start" else "end")
-    Notification.newNotification(typeNotif,request.body)
+    Notification.newNotification(typeNotif,request.body,riderId)
     Ok("ok")
   }
 
