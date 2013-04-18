@@ -8,12 +8,15 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class ControlActivity extends Activity {
+
 
     
     Button btnStart;
@@ -22,12 +25,14 @@ public class ControlActivity extends Activity {
     GPSTracker gps;
   
     
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_control);
- 
-        btnStart = (Button) findViewById(R.id.button_start);
- 
+
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_control);
+		btnStart = (Button) findViewById(R.id.button_start);
+		 
         // show location button click event
         btnStart.setOnClickListener(new View.OnClickListener() {
  
@@ -53,21 +58,25 @@ public class ControlActivity extends Activity {
  
             }
         });
-    }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.control, menu);
-        return true;
-    }
-    
-    
-  
-    
-    
-    
-    
-    
+		/*Spinner spinner = (Spinner) findViewById(R.id.team_spinner);
+		// Create an ArrayAdapter using the string array and a default spinner
+		// layout
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter
+				.createFromResource(this, R.array.array_team,
+						android.R.layout.simple_spinner_item);
+		// Specify the layout to use when the list of choices appears
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		// Apply the adapter to the spinner
+		spinner.setAdapter(adapter);*/
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.control, menu);
+		return true;
+	}
+
 }

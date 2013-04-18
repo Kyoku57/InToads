@@ -20,11 +20,13 @@ require.config({
 require([
     'app/Stream',
     'app/views/Map',
-    'app/views/LogEvents'
-], function (stream,Map,LogEvents) {
+    'app/views/LogEvents',
+    'app/views/Team'
+], function (stream,Map,LogEvents,Team) {
     // Application startup
     var mapView=new Map();
     var logView=new LogEvents();
+    var team=new Team();
     var source = new EventSource("/live");
     source.onmessage = $.proxy(stream.trigger,stream);
     console.log("Application loaded.")

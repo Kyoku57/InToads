@@ -1,2 +1,10 @@
 target
 .DS_Store
+/backend/backend.iml
+/backend/backend-grailsPlugins.iml
+/backend/.idea
+/backend/out
+*.class
+/android/InToads/bin
+/android/.metadata
+*.xcuserstate
