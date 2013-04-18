@@ -15,6 +15,8 @@
 		AD86E20317206500009F036A /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E20217206500009F036A /* Team.m */; };
 		AD86E20617206500009F036A /* Rider.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E20517206500009F036A /* Rider.m */; };
 		AD86E20917206500009F036A /* GeolocEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E20817206500009F036A /* GeolocEvent.m */; };
+		AD86E20C17207256009F036A /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = AD86E20A17207256009F036A /* navbar.png */; };
+		AD86E20D17207256009F036A /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD86E20B17207256009F036A /* navbar@2x.png */; };
 		ADA585011715475900AEC4AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585001715475900AEC4AE /* UIKit.framework */; };
 		ADA585031715475900AEC4AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585021715475900AEC4AE /* Foundation.framework */; };
 		ADA585051715475900AEC4AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA585041715475900AEC4AE /* CoreGraphics.framework */; };
@@ -67,6 +69,8 @@
 		AD86E20517206500009F036A /* Rider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rider.m; sourceTree = "<group>"; };
 		AD86E20717206500009F036A /* GeolocEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeolocEvent.h; sourceTree = "<group>"; };
 		AD86E20817206500009F036A /* GeolocEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeolocEvent.m; sourceTree = "<group>"; };
+		AD86E20A17207256009F036A /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
+		AD86E20B17207256009F036A /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		ADA584FD1715475900AEC4AE /* InToads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InToads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA585001715475900AEC4AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ADA585021715475900AEC4AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -134,6 +138,8 @@
 		AD86E1E817205910009F036A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AD86E20A17207256009F036A /* navbar.png */,
+				AD86E20B17207256009F036A /* navbar@2x.png */,
 				ADA5853D17154B4700AEC4AE /* InToads.png */,
 			);
 			name = Images;
@@ -376,6 +382,8 @@
 				ADA5853E17154B4700AEC4AE /* InToads.png in Resources */,
 				AD86E1FC17205F6D009F036A /* Default@2x.png in Resources */,
 				AD86E1FE17205F7E009F036A /* Default.png in Resources */,
+				AD86E20C17207256009F036A /* navbar.png in Resources */,
+				AD86E20D17207256009F036A /* navbar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

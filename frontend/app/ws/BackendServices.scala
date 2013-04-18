@@ -15,7 +15,7 @@ object BackendServices {
   private val backend = "http://192.168.4.136:9000"
 
 
- 
+
 
   def getRiderDetail(idRider:String):Future[Rider] =
     WS.url(backend+ "/rider/"+idRider).get().map(_.json).map{json=>
@@ -38,16 +38,18 @@ object BackendServices {
       )
     }
 
-  /*def getTeams:Future[Seq[Team]]=
-    WS.url(backend + "/teams").get().map(_.json).map{teams=>
-      teams.asInstanceOf[JsArray].value.map{team=>
-        Await.b WS.url(backend + "/team/"+((team \ "id").as[String])).get().map(_.json).map{riders=>
+  def getTeams:Future[Seq[Team]]=
+    WS.url(backend + "/teams").get().map(_.json).flatMap{teams=>
+      Future.sequence(teams.asInstanceOf[JsArray].value.map{team=>
+        WS.url(backend + "/team/"+((team \ "id").as[String])).get().map(_.json).map{riders=>
           riders.asInstanceOf[JsArray].value.map{rider=>
-            Rider((rider \ "id").as[String],(rider \ "name").as[String],None)
+            Rider((rider \ "id").as[String],(rider \ "name").as[String],None,(team \ "id").as[String],(team \"name").as[String])
           }
+        }.map{riders=>
+          Team((team\"id").as[String],(team\"name").as[String],riders)
         }
-      }
-    }*/
+      })
+    }
 
 
 }
