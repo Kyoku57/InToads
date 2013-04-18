@@ -1,14 +1,13 @@
 package backend
 
-import com.mongodb.DB
 import com.mongodb.Mongo
+import org.bson.types.ObjectId
 
 class TeamsService {
 
-    Mongo mongo
+    def mongo
 
     def allTeams() {
-        DB db = mongo.getDB("intoads")
-        db.teams.find()
+        def values = Teams.findAll()
     }
 }
