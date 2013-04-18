@@ -1,6 +1,7 @@
 package backend
 
 import grails.converters.JSON
+import objects.Rider
 
 class RiderController {
 
@@ -19,9 +20,12 @@ class RiderController {
         if (!id)
             return;
 
-        def coureur = riderService.findCoureur(id)
+        Rider coureur = riderService.findCoureur(id)
 
-        render coureur as JSON
+        def JSONFormat = [id:coureur.id, name:coureur.name, twitter:coureur.twitter]
+
+        render JSONFormat as JSON
+
         return;
     }
 

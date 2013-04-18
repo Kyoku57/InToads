@@ -1,4 +1,8 @@
 package lu.intech.intoads.activity;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d84af67ea5f76918f4b145b6fd809a9a069ff57
 import java.util.ArrayList;
 
 import lu.intech.intoads.R;
@@ -7,11 +11,17 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+=======
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
+>>>>>>> 5d84af67ea5f76918f4b145b6fd809a9a069ff57
 
 public class ControlActivity extends Activity {
 

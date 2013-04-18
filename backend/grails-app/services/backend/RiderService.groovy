@@ -1,5 +1,7 @@
 package backend
 
+import objects.Rider
+
 class RiderService {
 
 
@@ -13,7 +15,7 @@ class RiderService {
         // Get a DB
         def db = mongo.getDB("intoads")
 
-        def values = db.riders.find([id:idCoureur]).collect{it-> ["id":it.id,"name":it.name,"twitter":it.twitter]}
+        def values = db.riders.find([id:idCoureur]).collect{it-> new Rider(it.id,it.name,it.twitter)}
 
         return values[0];
     }
