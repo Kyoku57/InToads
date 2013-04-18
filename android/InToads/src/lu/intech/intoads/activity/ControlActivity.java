@@ -1,8 +1,5 @@
 package lu.intech.intoads.activity;
-<<<<<<< HEAD
-=======
 
->>>>>>> 5d84af67ea5f76918f4b145b6fd809a9a069ff57
 import java.util.ArrayList;
 
 import lu.intech.intoads.R;
@@ -11,17 +8,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-<<<<<<< HEAD
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-=======
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.Toast;
->>>>>>> 5d84af67ea5f76918f4b145b6fd809a9a069ff57
 
 public class ControlActivity extends Activity {
 
@@ -110,17 +101,17 @@ public class ControlActivity extends Activity {
 	}
 	
 	/**
-	 * Méthode qui charge le spinner Team avec la liste des Team passée en paramètre
+	 * Mï¿½thode qui charge le spinner Team avec la liste des Team passï¿½e en paramï¿½tre
 	 * @param listTeam la liste des Team 
 	 */
 	public void loadTeams(ArrayList<Team> listTeam){
-		//On récupère le spinner pour les teams
+		//On rï¿½cupï¿½re le spinner pour les teams
 		Spinner spinner = (Spinner) findViewById(R.id.team_spinner);
 		
-		//Création de l'adapter, fournit avec la liste des Team
+		//Crï¿½ation de l'adapter, fournit avec la liste des Team
 		ArrayAdapter<Team> adapter = new ArrayAdapter<Team>(this, android.R.layout.simple_spinner_item,	listTeam);
 		
-		//Le spinner de team utilise l'adapter précédemment créé
+		//Le spinner de team utilise l'adapter prï¿½cï¿½demment crï¿½ï¿½
 		spinner.setAdapter(adapter);
 	}
 
