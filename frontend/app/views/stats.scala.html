@@ -1,14 +1,19 @@
-@(riders : List[Rider])
+@(teams:Seq[Team])
 
 
 @main{
+	<link rel="stylesheet" media="screen" href=" @routes.Assets.at("stylesheets/tablesorter/style.css") ">
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/vendor/jquery-1.9.1.min.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/vendor/jquery.tablesorter.min.js")"></script>
 	<div class="row-fluid">
-  		<div class="span2"><h1>InToads 2013!</h1></div>
+  		<div class="span2" id="divlogo">
+  			<h1>InToads 2013!</h1>
+  		</div>
   	
   		<div class="span10">
 			<div id="header" class="well">
-<!-- 				<button class="btn btn-large btn-info pull-right" type="button" > -->
-					<a href="/">Home</a>
+				<a href="/"><button class="btn btn-large btn-block " type="button">Home</button></a>
+					
 <!-- 				</button> -->
 			</div>
 		</div>
@@ -16,17 +21,18 @@
     
 	<div class="row-fluid">
   		<div class="span12"> 
-  		   <div id="statsMap">
-  		   <table class="table table-bordered">
+  		   <div  id="statsMap">
+  		   <table id="stats"  class="tablesorter table table-bordered">
 	  		   <thead>
 	  		 
-	  		   	 <th>Username</th>
+	  		   	 <th>Team</th><th>Name</th><th>Twitter</th>
 	  		  
 	  		   </thead>
     		<tbody>
-    		@for(rider <- riders) {
-    		<tr><td>@rider.name</td></tr>
-    		
+    		@for(team <- teams) {
+	    		@for(rider <- team.riders) {
+	    				<tr><td>@team.name</td><td>@rider.name</td><td>@rider.twitter.getOrElse("")</td></tr>
+	    		}	
     		}
     		</tbody>
     		</table>
@@ -34,7 +40,13 @@
   		</div>
    </div>
     
-
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#stats').tablesorter();
+		
+	});
+	
+	</script>
  
 
    
