@@ -5,3 +5,4 @@ target
 /backend/.idea
 /android/InToads/bin
 /android/.metadata
+*.xcuserstate
