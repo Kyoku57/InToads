@@ -143,11 +143,11 @@ public class ControlActivity extends Activity {
 	
 	public void loadTeams(ArrayList<Team> listTeam){
 		Spinner spinner = (Spinner) findViewById(R.id.team_spinner);
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter
+		/*ArrayAdapter<CharSequence> adapter = ArrayAdapter
 				.createFromResource(this, R.array.array_team,
 						android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spinner.setAdapter(adapter);
+		spinner.setAdapter(adapter);*/
 	}
 
 }
