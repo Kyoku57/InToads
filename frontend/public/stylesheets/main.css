@@ -7,12 +7,15 @@
 #team{
     width: 30%;
     height: 500px;
-    display: table-cell;
+}
+#header{
+	margin-top:10px;
+	margin-right:3%;  
 }
 
 
 #log{
-
+	display: table-cell;
 }
 
 #container{
