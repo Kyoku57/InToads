@@ -7,11 +7,13 @@
 //
 
 #import "Team.h"
+#import "Rider.h"
 
 
 @implementation Team
 
 @dynamic name;
+@dynamic teamId;
 @dynamic rider;
 
 @end

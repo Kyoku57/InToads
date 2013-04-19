@@ -14,6 +14,7 @@
 @interface Rider : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * riderId;
 @property (nonatomic, retain) Team *team;
 
 @end

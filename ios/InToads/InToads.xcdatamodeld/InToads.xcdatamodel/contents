@@ -8,15 +8,17 @@
     </entity>
     <entity name="Rider" representedClassName="Rider" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="riderId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="team" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="rider" inverseEntity="Team" syncable="YES"/>
     </entity>
     <entity name="Team" representedClassName="Team" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="rider" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Rider" inverseName="team" inverseEntity="Rider" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Team" positionX="160" positionY="192" width="128" height="73"/>
-        <element name="Rider" positionX="-99" positionY="54" width="128" height="73"/>
         <element name="GeolocEvent" positionX="-99" positionY="252" width="128" height="103"/>
+        <element name="Rider" positionX="-99" positionY="54" width="128" height="90"/>
+        <element name="Team" positionX="160" positionY="192" width="128" height="90"/>
     </elements>
 </model>

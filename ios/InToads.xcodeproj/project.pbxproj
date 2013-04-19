@@ -42,6 +42,8 @@
 		ADC6E0D1171D45F000410166 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC6E0D0171D45F000410166 /* Reachability.m */; };
 		ADC6E0D6171D479C00410166 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC6E0D5171D479C00410166 /* SystemConfiguration.framework */; };
 		ADC6E0D8171D47AC00410166 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC6E0D7171D47AC00410166 /* CoreLocation.framework */; };
+		ADD8FB741720877300CC0A1E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8FB731720877300CC0A1E /* MBProgressHUD.m */; };
+		ADD8FB7F1720892F00CC0A1E /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD86E1F217205B27009F036A /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +63,8 @@
 		AD86E1F217205B27009F036A /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		AD86E1F717205ED7009F036A /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
 		AD86E1F817205ED7009F036A /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
-		AD86E1FB17205F6D009F036A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		AD86E1FD17205F7D009F036A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AD86E1FB17205F6D009F036A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		AD86E1FD17205F7D009F036A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		AD86E20117206500009F036A /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
 		AD86E20217206500009F036A /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 		AD86E20417206500009F036A /* Rider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rider.h; sourceTree = "<group>"; };
@@ -105,6 +107,8 @@
 		ADC6E0D4171D466500410166 /* Consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
 		ADC6E0D5171D479C00410166 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ADC6E0D7171D47AC00410166 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		ADD8FB721720877300CC0A1E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		ADD8FB731720877300CC0A1E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 		AD86E1E817205910009F036A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AD86E1FD17205F7D009F036A /* Default.png */,
+				AD86E1FB17205F6D009F036A /* Default@2x.png */,
 				AD86E20A17207256009F036A /* navbar.png */,
 				AD86E20B17207256009F036A /* navbar@2x.png */,
 				ADA5853D17154B4700AEC4AE /* InToads.png */,
@@ -191,8 +197,6 @@
 		ADA584F41715475900AEC4AE = {
 			isa = PBXGroup;
 			children = (
-				AD86E1FD17205F7D009F036A /* Default.png */,
-				AD86E1FB17205F6D009F036A /* Default@2x.png */,
 				ADA585081715475900AEC4AE /* InToads */,
 				ADA5852A1715475900AEC4AE /* InToadsTests */,
 				ADA584FF1715475900AEC4AE /* Frameworks */,
@@ -289,6 +293,7 @@
 		ADC6E0D2171D45F500410166 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				ADD8FB751720877600CC0A1E /* ProgressHUD */,
 				ADC6E0D3171D460500410166 /* Reachability */,
 			);
 			name = Libraries;
@@ -301,6 +306,15 @@
 				ADC6E0D0171D45F000410166 /* Reachability.m */,
 			);
 			name = Reachability;
+			sourceTree = "<group>";
+		};
+		ADD8FB751720877600CC0A1E /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8FB721720877300CC0A1E /* MBProgressHUD.h */,
+				ADD8FB731720877300CC0A1E /* MBProgressHUD.m */,
+			);
+			name = ProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD8FB7F1720892F00CC0A1E /* CoreDataManager.m in Sources */,
 				ADA5850F1715475900AEC4AE /* main.m in Sources */,
 				ADA585131715475900AEC4AE /* AppDelegate.m in Sources */,
 				ADA5851C1715475900AEC4AE /* InToads.xcdatamodeld in Sources */,
@@ -430,6 +445,7 @@
 				AD86E20317206500009F036A /* Team.m in Sources */,
 				AD86E20617206500009F036A /* Rider.m in Sources */,
 				AD86E20917206500009F036A /* GeolocEvent.m in Sources */,
+				ADD8FB741720877300CC0A1E /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,9 +11,9 @@
 
 @implementation GeolocEvent
 
+@dynamic altitude;
 @dynamic latitude;
 @dynamic longitude;
 @dynamic timestamp;
-@dynamic altitude;
 
 @end

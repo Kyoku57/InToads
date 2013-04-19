@@ -62,6 +62,7 @@
 @synthesize isTopProjectOnly;
 @synthesize activePathForTopView;
 @synthesize apnToken;
+@synthesize loadingHUD;
 
 static HTTPClient *sharedInstance = nil;
 
@@ -230,6 +231,44 @@ static HTTPClient *sharedInstance = nil;
     return YES;
 }
 
+#pragma mark - Loading HUD handling methods
+
+-(void) presentLoadingHudWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image andDelegate:(id)delegate {
+    
+    loadingHUD = [[MBProgressHUD alloc] initWithView:delegate];
+    [delegate addSubview:loadingHUD];
+    
+    if (image) {
+        loadingHUD.customView = [[UIImageView alloc] initWithImage:image];
+    }
+    
+    loadingHUD.mode = MBProgressHUDModeCustomView;
+    [loadingHUD setLabelText:title];
+    [loadingHUD setDetailsLabelText:message];
+    
+    [loadingHUD show:YES];
+    
+    [loadingHUD hide:YES afterDelay:8];
+    
+    [loadingHUD addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissLoadingHud)]];
+}
+
+-(void) presentSimpleLoadingHudWithTitle:(NSString *)title andDelegate:(id)delegate
+{
+    loadingHUD = [[MBProgressHUD alloc] initWithView:delegate];
+    [delegate addSubview:loadingHUD];
+    
+    loadingHUD.mode = MBProgressHUDModeIndeterminate;
+    [loadingHUD setLabelText:title];
+    
+    [loadingHUD show:YES];
+}
+
+-(void) dismissLoadingHud {
+    [loadingHUD hide:YES];
+}
+
+
 #pragma mark - SINGLETON STRUCTURE HANDLING
 
 
@@ -246,7 +285,7 @@ static HTTPClient *sharedInstance = nil;
 -(id) init {
     self = [super init];
     if (self) {
-        serverURL = @"192.168.0.114:9000";
+        serverURL = @"192.168.4.136:9000";
         serverProtocol = @"http://%@/%@";
     }
     return self;

@@ -12,6 +12,18 @@
 
 static HTTPRequests *sharedInstance = nil;
 
+-(void)sendGetTeamsListRequestWithDelegate:(id)delegate
+{
+    [[HTTPClient sharedInstance] sendHttpRequestToURL:@"teams" withMethod:@"GET" params:[NSDictionary new] delegate:delegate sendingCookie:NO];
+}
+
+-(void) sendGetRidersListRequestForTeam:(NSString *)teamId WithDelegate:(id)delegate
+{
+    NSString *url = [NSString stringWithFormat:@"team/%@", teamId];
+    [[HTTPClient sharedInstance] sendHttpRequestToURL:url withMethod:@"GET" params:[NSDictionary new] delegate:delegate sendingCookie:NO];
+
+}
+
 
 #pragma mark - SINGLETON STRUCTURE HANDLING
 

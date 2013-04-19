@@ -91,7 +91,7 @@
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="u6q-fe-Eqp"/>
                                             <barButtonItem style="done" systemItem="done" id="D2P-Sr-8Lx">
                                                 <connections>
-                                                    <action selector="hidePicker:" destination="Y0m-vf-tEA" id="hCR-IK-sve"/>
+                                                    <action selector="selectRow:" destination="Y0m-vf-tEA" id="S9B-Pb-l5n"/>
                                                 </connections>
                                             </barButtonItem>
                                         </items>
@@ -186,6 +186,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TeamViewController.h"/>
             <relationships>
                 <relationship kind="action" name="hidePicker:"/>
+                <relationship kind="action" name="selectRow:"/>
                 <relationship kind="action" name="showPicker:"/>
                 <relationship kind="action" name="startAction:"/>
                 <relationship kind="outlet" name="pickerView" candidateClass="UIView"/>

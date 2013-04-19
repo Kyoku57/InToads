@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HTTPRequests.h"
+#import "CoreDataManager.h"
 
-@interface TeamViewController : UIViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface TeamViewController : UIViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate, NSURLConnectionDataDelegate>
 
+@property (strong, nonatomic) NSString *jsonResponse;
 @property (strong, nonatomic) IBOutlet UILabel *teamLabel;
 @property (strong, nonatomic) IBOutlet UITextField *teamField;
 @property (strong, nonatomic) IBOutlet UILabel *riderLabel;
@@ -28,4 +31,5 @@
 - (IBAction)startAction:(id)sender;
 -(IBAction) showPicker:(id)sender;
 -(IBAction) hidePicker:(id)sender;
+-(IBAction)selectRow:(id)sender;
 @end

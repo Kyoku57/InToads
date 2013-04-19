@@ -18,7 +18,7 @@
 {
     UIImage *img = [UIImage imageNamed:@"navbar.png"];
     [[UINavigationBar appearance] setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
-    
+
     return YES;
 }
 

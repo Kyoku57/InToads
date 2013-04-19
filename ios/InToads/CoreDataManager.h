@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "CoreDataHelper.h"
 #import "AppDelegate.h"
+#import "GeolocEvent.h"
+#import "Rider.h"
+#import "Team.h"
 
 @interface CoreDataManager : NSObject
 
@@ -17,36 +20,14 @@
 + (id)sharedInstance;
 -(void)storeData;
 
-- (Parameters *) createOrUpdateParametersWithValue:(NSString *)value forKey:(NSString *)key;
-- (Parameters *)  getParametersForKey:(NSString *)key;
-- (Parameters *) setParameter:(Parameters *)param forKey:(NSString *)key andValue:(NSString *)value;
+- (Team *) createOrUpdateTeamWithName:(NSString *)name forId:(NSString *)teamId;
+- (Team *) getTeamForId:(NSString *)teamId;
+- (Team *) setTeam:(Team *)team forId:(NSString *)teamId andName:(NSString *)name;
+- (NSArray *) getAllTeams;
 
-
-- (Profile *) createOrUpdateProfileWithName:(NSString *)name city:(City *)city forId:(NSNumber *)profileId isDefault:(BOOL)isDefault;
--(Profile *) updateMobilePhone:(NSString *)mobilePhone forProfileId:(NSNumber *) profileId;
--(Profile *) updateProfileIsHost:(BOOL)isHost forProfileId:(NSNumber *) profileId;
--(Profile *) updateHomeAddress:(NSString *)address forProfileId:(NSNumber *) profileId;
--(Profile *) updateHomeLocation:(CLLocation *)location forProfileId:(NSNumber *) profileId;
--(Profile *) updateCityLocation:(CLLocation *)location forProfileId:(NSNumber *) profileId;
-- (Profile *) getProfileForId:(NSNumber *)profileId;
-- (NSArray *) getAllProfiles;
-- (Profile *) getDefaultProfile;
-- (Profile *) setProfile:(Profile *)profile forId:(NSNumber *)profileId profileName:(NSString *)name andCity:(City *)city isDefault:(BOOL)isDefault;
-
-- (Cars *) createOrUpdateCarWithAddress:(NSString *)address addressId:(NSNumber *)addressId isAvailable:(BOOL)isAvailable nextAvailabilityIn:(NSNumber *)nextAvailability latitude:(NSNumber *)latitude andLongitude:(NSNumber *)longitude;
-- (Cars *) getCarForAddressId:(NSNumber *)addressId;
-- (Cars *) setCar:(Cars *)car forAddressId:(NSNumber *)addressId address:(NSString *)address isAvailable:(BOOL)isAvailable nextAvailabilityIn:(NSNumber *)nextAvailability latitude:(NSNumber *)latitude andLongitude:(NSNumber *)longitude;
-
-- (City *) createOrUpdateCityWithName:(NSString *)cityName andLocation:(CLLocation *)cityCenter forId:(NSNumber *)cityId;
-- (City *)  getCityForId:(NSNumber *)cityId;
-- (City *) setCity:(City *)city withName:(NSString *)cityName andLocation:(CLLocation *)cityCenter forId:(NSNumber *)cityId;
-
-- (Search *) createOrUpdateSearchWithAddress:(NSString *)address location:(CLLocation *)location startDate:(NSDate *)startDate endDate:(NSDate *)endDate andType:(NSString *)type;
-- (Search *) createSearchWithAddress:(NSString *)address location:(CLLocation *)location startDate:(NSDate *)startDate endDate:(NSDate *)endDate andType:(NSString *)type;
-- (Search *) getLastNonTimedOutSearch;
-- (NSArray *) getAllSearches;
-- (Search *) getLastSearch;
-- (Search *) getSearchForAddress:(NSString *)address;
-- (Search *) setSearch:(Search *)search address:(NSString *)address location:(CLLocation *)location startDate:(NSDate *)startDate endDate:(NSDate *)endDate andType:(NSString *)type;
+- (Rider *) createOrUpdateRiderWithName:(NSString *)name forId:(NSString *)riderId andTeamId:(NSString *)teamId;
+- (Rider *) getRiderForId:(NSString *)riderId;
+- (Rider *) setRider:(Rider *)rider forTeamId:(NSString *)teamId forId:(NSString *)riderId andName:(NSString *)name;
+- (NSArray *) getAllRidersForTeamId:(NSString *)teamId;
 
 @end

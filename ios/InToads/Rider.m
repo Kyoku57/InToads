@@ -13,6 +13,7 @@
 @implementation Rider
 
 @dynamic name;
+@dynamic riderId;
 @dynamic team;
 
 @end

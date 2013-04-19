@@ -14,4 +14,8 @@
 
 + (id)sharedInstance;
 
+-(void) sendGetTeamsListRequestWithDelegate:(id)delegate;
+-(void) sendGetRidersListRequestForTeam:(NSString *)teamId WithDelegate:(id)delegate;
+
+
 @end
